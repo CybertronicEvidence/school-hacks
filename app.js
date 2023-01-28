@@ -28,7 +28,7 @@ mongoose.set('strictQuery', false)
 
 
 const app = express()
-const port = process.env.PORT || 3080;
+const port = process.env.PORT || 3050;
 app.use(bodyParser.json())
 app.use(cors())
 
