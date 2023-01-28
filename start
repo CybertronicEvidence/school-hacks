@@ -1,0 +1,4 @@
+#!/bin/bash
+# run npm start automatically
+
+npm start
