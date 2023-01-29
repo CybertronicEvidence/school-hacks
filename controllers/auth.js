@@ -17,7 +17,7 @@ const register = async (req, res) => {
     // Encrypt password
 
     const password = CryptoJS.AES.encrypt(rawPassword, secret);
-    const confirmpassword = CryptoJS.AES.encrypt(rawConfirm, secret).toString(CryptoJS.enc.Utf8)
+    const confirmpassword = CryptoJS.AES.encrypt(rawConfirm, secret);
 
     // if (decrypt !== confirmpassword) {
     //     ResponseHandler(res, data = null, error = 'Passwords do not match', status = 400)
