@@ -10,11 +10,14 @@ const secret = process.env.SECRET || 'onetinysecret';
 
 const register = async (req, res) => {
 
-    const { firstName, lastName, email, password: rawPassword } = req.body;
+    const { firstName, lastName, email, password: rawPassword, confirmpassword } = req.body;
 
     // Check validation
 
     // Encrypt password
+    if (password === confirmpassword) {
+        ResponseHandler(res, data = null, error = 'Passwords do not match', status = 400)
+    }
 
     const password = CryptoJS.AES.encrypt(rawPassword, secret);
 
@@ -24,6 +27,7 @@ const register = async (req, res) => {
         username,
         email,
         password,
+        confirmpassword
     });
 
     try {
