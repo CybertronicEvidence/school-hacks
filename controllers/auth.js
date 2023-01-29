@@ -10,7 +10,7 @@ const secret = process.env.SECRET || 'onetinysecret';
 
 const register = async (req, res) => {
 
-    const { firstName, lastName, username, email, password: rawPassword } = req.body;
+    const { firstName, lastName, email, password: rawPassword } = req.body;
 
     // Check validation
 
