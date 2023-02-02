@@ -3,11 +3,11 @@ const { ResponseHandler } = require('../utils');
 
 const request = async (req, res) => {
     const { message } = req.body
-    // console.log(message)
+    console.log(message)
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `${message}`,
-        max_tokens: 4000,
+        max_tokens: 256,
         temperature: 0.5,
     });
     // res.json({
