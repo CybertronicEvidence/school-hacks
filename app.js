@@ -9,6 +9,8 @@ const request = require('./routes/requestRoute')
 const auth = require('./routes/userRoute')
 dotenv.config()
 
+
+
 const mongo = process.env.MONGO_URI
 
 
@@ -29,8 +31,14 @@ mongoose.set('strictQuery', false)
 
 const app = express()
 const port = process.env.PORT || 3050;
+const corsOptions = {
+    origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json())
-app.use(cors())
+
 
 app.use('/api/chat', request)
 app.use('/api/auth', auth)
