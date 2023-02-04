@@ -38,7 +38,7 @@ const corsOption = {
     origin: "https://student-hack.vercel.app"
 }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(cors(corsOption))
 
 app.use(bodyParser.json())
