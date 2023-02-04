@@ -32,7 +32,7 @@ mongoose.set('strictQuery', false)
 const app = express()
 const port = process.env.PORT || 3050;
 const corsOptions = {
-    origin: "http://localhost:3000"
+    origin: "http://localhost:3003"
 };
 
 app.use(cors(corsOptions));
