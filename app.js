@@ -34,13 +34,17 @@ const port = process.env.PORT || 3050;
 const corsOptions = {
     origin: "http://localhost:3003"
 };
+const corsOption = {
+    origin: "https://student-hack.vercel.app"
+}
 
 app.use(cors(corsOptions));
+app.use(cors(corsOption))
 
 app.use(bodyParser.json())
 
 
-app.use('/api/chat', request)
+// app.use('/api/chat', request)
 app.use('/api/auth', auth)
 
 app.listen(port, () => {
