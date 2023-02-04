@@ -5,7 +5,7 @@ const { verifyToken, verifyTokenAndAuthorization } = require('../controllers/ver
 
 // routes
 
-router.post('/', verifyToken, request)
+router.post('/', request)
 
 router.get('/models', verifyTokenAndAuthorization, model)
 
